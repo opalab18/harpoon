@@ -1,7 +1,46 @@
-$primary-color:red;
-h1{
-	color:$primary-color;
+
+
+$text1-color:#2E556F;
+$text2-color:white;
+$text3-color:lightblue;
+$f-family:FuturaStd Condensed;
+
+#advisors{
+	background-color:whitesmoke;
+	.row{
+		margin-bottom:30px;
+	}
+	padding:50px 0px 0px 0px;
+	h2{
+		font-weight:bold;
+		font-size:35px;
+		color:$text1-color;
+		margin-bottom:80px;
+	}
+	img{
+		border-radius:50%;
+	}
+	h5{	
+		font-weight:bold;
+		font-size:35px;
+		color:$text3-color;
+	}
+	ul{
+		padding-left:20px;
+		li{
+			padding:4px 0px 4px 0px;
+			font-size:17px;
+		}
+	}
+	.adv-bot{
+		text-align:right;
+		h2{
+			margin-top:18%;
+		}
+	}
 }
-p{
-	color:$primary-color;
+@media (max-width: 992px){
+	#advisors{
+		text-align:center;
+	}
 }
