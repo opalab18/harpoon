@@ -1,3 +1,7 @@
-@import "bootstrap";
-
-/* Main file */
+$primary-color:red;
+h1{
+	color:$primary-color;
+}
+p{
+	color:$primary-color;
+}
