@@ -1,7 +1,82 @@
 $text1-color:#2E556F;
 $text2-color:white;
-$text3-color:lightblue;
-$f-family:FuturaStd CondensedBold;
+$text3-color:#00B9B9;
+$f-family:Tahoma, Geneva, sans-serif;
+
+#header{
+	background: url(../img/bg1.jpg) no-repeat; 
+	-webkit-background-size: fixed;
+	-moz-background-size: fixed;
+	-o-background-size: fixed;
+	background-size: fixed;
+	padding:50px 0px 50px 0px;
+	button{
+		background: url(../img/button.png) no-repeat;
+		padding:11px 58px 11px 58px;
+		text-decoration:none;
+		cursor:pointer;
+		border:none;
+		float:right;
+		margin-bottom:300px;
+		a{
+			font-size:20px;
+			font-weight:bold;
+			color:white;
+			text-decoration:none;
+			letter-spacing:1px;
+		}
+	}
+	h1{
+		font-weight:bold;
+		font-size:50px;
+		color:white;
+	}
+	img{
+		width: 75%;
+    	height: auto;
+    	margin-bottom:285px;
+	}
+	p{
+		font-family:$f-family;
+		font-size:20px;
+		color:white;
+		text-align:center;
+	}
+	.fafa{
+		width:100%;
+		text-align:center;
+		i{
+			color:white;
+			.fa{
+				font-size:30px;
+			}
+		}
+	}
+	
+}
+@media (max-width: 768px){
+	#header{
+		button{
+			padding:14px 64px 15px 64px;
+			margin-right:20px;
+			margin:0px 20px 60px auto;
+			display:block;
+			a{
+				font-size:15px;
+			}
+		}
+		h1{
+			text-align:center;
+			font-weight:bold;
+			font-size:35px;
+			color:white;
+		}
+		img{
+			display:block;
+			margin: 0px auto 20px auto;
+		}
+	}
+}
 
 #advisors{
 	background-color:whitesmoke;
@@ -59,7 +134,7 @@ $f-family:FuturaStd CondensedBold;
 		font-weight:bold;
 		font-size:40px;
 		color:$text2-color;
-		margin-bottom:110px;
+		margin-bottom:120px;
 	}
 	p{
 		font-size:30px;
