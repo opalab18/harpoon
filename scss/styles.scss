@@ -18,6 +18,10 @@ $f-family:Tahoma, Geneva, sans-serif;
 	width: 100%;
     height: auto;
 }
+.textp{
+	font-family:$f-family;
+	font-size:20px;
+}
 
 #header{
 	width:100%;
@@ -215,7 +219,7 @@ $f-family:Tahoma, Geneva, sans-serif;
 		margin-bottom:40px;
 	}
 	p{
-		font-size:20px;
+		@extend .textp;
 		line-height: 1.6;
 		color:white;
 	}

@@ -13,6 +13,10 @@
   width: 100%;
   height: auto; }
 
+.textp, #portfolio p {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 20px; }
+
 #header {
   width: 100%;
   margin: auto auto;
@@ -171,7 +175,6 @@
     color: #00B9B9;
     margin-bottom: 40px; }
   #portfolio p {
-    font-size: 20px;
     line-height: 1.6;
     color: white; }
   #portfolio button {
