@@ -3,6 +3,13 @@ $text2-color:white;
 $text3-color:#00B9B9;
 $f-family:Tahoma, Geneva, sans-serif;
 
+.line{
+	position:absolute;
+	margin-top:80px;
+	height: 4px;
+	color:$text3-color;
+    background-color: $text3-color;
+}
 .headings{
 	font-weight:bold;
 	font-size:40px;
@@ -23,18 +30,23 @@ $f-family:Tahoma, Geneva, sans-serif;
 	padding:50px 0px 50px 0px;
 	button{
 		background: url(../img/button.png) no-repeat;
-		padding:11px 58px 11px 58px;
+		padding:9px 56px 9px 55px;
 		text-decoration:none;
 		cursor:pointer;
 		border:none;
 		float:right;
 		margin-bottom:300px;
+		border:1.5px solid $text3-color;
 		a{
 			font-size:20px;
 			font-weight:bold;
 			color:white;
 			text-decoration:none;
 			letter-spacing:1px;
+		}
+		&:hover{
+			background:$text3-color;
+			transition:1.5s ease;
 		}
 	}
 	h1{
@@ -46,6 +58,12 @@ $f-family:Tahoma, Geneva, sans-serif;
 		width: 75%;
     	height: auto;
     	margin-bottom:285px;
+    	-webkit-transition: -webkit-transform .8s ease-in-out;
+        transition: transform .8s ease-in-out;
+    	&:hover{
+    		-webkit-transform: rotateY(360deg);
+			transform: rotateY(360deg);
+    	}
 	}
 	p{
 		font-family:$f-family;
@@ -64,7 +82,7 @@ $f-family:Tahoma, Geneva, sans-serif;
 @media (max-width: 1366px){
 	#header{
 		button{
-			padding:14px 64px 15px 64px;
+			padding:10px 64px 10px 64px;
 			margin-right:20px;
 			margin:0px 20px 170px auto;
 			display:block;
@@ -81,7 +99,7 @@ $f-family:Tahoma, Geneva, sans-serif;
 @media (max-width: 768px){
 	#header{
 		button{
-			padding:14px 64px 15px 64px;
+			padding:10px 64px 10px 64px;
 			margin-right:20px;
 			margin:0px 20px 60px auto;
 			display:block;
@@ -104,7 +122,11 @@ $f-family:Tahoma, Geneva, sans-serif;
 
 #about{
 	background-color:whitesmoke;
-	padding:50px 0px 0px 0px;
+	padding:50px 0px 50px 0px;
+	hr{
+		@extend .line;
+		width:31%;
+	}
 	h2{
 		@extend .headings;
 		color:$text1-color;
@@ -154,9 +176,90 @@ $f-family:Tahoma, Geneva, sans-serif;
 	}
 }
 
+
+#portfolio{
+	background: url(../img/bg2.jpg) no-repeat fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding:50px 0px 50px 0px;
+	hr{
+		@extend .line;
+		width:37.5%;
+	}
+	h2{
+		@extend .headings;
+		color:$text2-color;
+		margin-bottom:100px;
+	}
+	.porto{
+		margin-bottom:50px;
+	}
+	#window{
+		padding:30px;
+	}
+	.window{
+		padding:30px;
+		background: rgba(255, 255, 255, 0.1);
+		transform: scale(1.1);
+		transition:0.7s ease;
+	}
+	img{
+		margin-bottom:20px;
+	}
+	.port-p{
+		font-style: italic;
+		font-size:18px;
+		color:$text3-color;
+		margin-bottom:40px;
+	}
+	p{
+		font-size:20px;
+		line-height: 1.6;
+		color:white;
+	}
+	button{
+		background: rgba(255, 255, 255, 0.0);
+		padding:12px 50px 12px 50px;
+		text-decoration:none;
+		cursor:pointer;
+		border:none;
+		border:1.5px solid $text3-color;
+		a{
+			font-size:15px;
+			font-weight:bold;
+			color:white;
+			text-decoration:none;
+		}
+		&:hover{
+			background: url(../img/button.png) no-repeat;
+			transition:1.5s ease;
+		}
+	}
+}
+@media (max-width: 768px){
+	#portfolio{
+		text-align:center;
+		h2{
+			font-size:30px;
+			margin-bottom:60px;
+		}
+		p{
+			font-size:15px;
+			line-height: 1.6;
+		}
+	}
+	
+}
+
 #advisors{
 	background-color:whitesmoke;
 	padding:50px 0px 0px 0px;
+	hr{
+		@extend .line;
+		width:36.5%;
+	}
 	.row{
 		margin-bottom:30px;
 	}
@@ -211,6 +314,10 @@ $f-family:Tahoma, Geneva, sans-serif;
 	-o-background-size: cover;
 	background-size: cover;
 	padding:50px 0px 90px 0px;
+	hr{
+		@extend .line;
+		width:36.5%;
+	}
 	h2{
 		@extend .headings;
 		color:$text2-color;
@@ -222,6 +329,10 @@ $f-family:Tahoma, Geneva, sans-serif;
 	}
 	img{
 		margin-bottom:40px;
+    	&:hover{
+			 transform: scale(1.1);
+			 transition:0.7s ease;
+    	}
 	}
 }
 @media (max-width: 768px){

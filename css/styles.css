@@ -1,4 +1,11 @@
-.headings, #about h2, #about h3, #advisors h2, #investors h2 {
+.line, #about hr, #portfolio hr, #advisors hr, #investors hr {
+  position: absolute;
+  margin-top: 80px;
+  height: 4px;
+  color: #00B9B9;
+  background-color: #00B9B9; }
+
+.headings, #about h2, #about h3, #portfolio h2, #advisors h2, #investors h2 {
   font-weight: bold;
   font-size: 40px; }
 
@@ -17,18 +24,24 @@
   padding: 50px 0px 50px 0px; }
   #header button {
     background: url(../img/button.png) no-repeat;
-    padding: 11px 58px 11px 58px;
+    padding: 9px 56px 9px 55px;
     text-decoration: none;
     cursor: pointer;
     border: none;
     float: right;
-    margin-bottom: 300px; }
+    margin-bottom: 300px;
+    border: 1.5px solid #00B9B9; }
     #header button a {
       font-size: 20px;
       font-weight: bold;
       color: white;
       text-decoration: none;
       letter-spacing: 1px; }
+    #header button:hover {
+      background: #00B9B9;
+      -webkit-transition: 1.5s ease;
+      -o-transition: 1.5s ease;
+      transition: 1.5s ease; }
   #header h1 {
     font-weight: bold;
     font-size: 50px;
@@ -36,7 +49,15 @@
   #header img {
     width: 75%;
     height: auto;
-    margin-bottom: 285px; }
+    margin-bottom: 285px;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: -webkit-transform .8s ease-in-out;
+    -o-transition: transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+    transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out; }
+    #header img:hover {
+      -webkit-transform: rotateY(360deg);
+      transform: rotateY(360deg); }
   #header p {
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 20px;
@@ -50,7 +71,7 @@
 
 @media (max-width: 1366px) {
   #header button {
-    padding: 14px 64px 15px 64px;
+    padding: 10px 64px 10px 64px;
     margin-right: 20px;
     margin: 0px 20px 170px auto;
     display: block; }
@@ -62,7 +83,7 @@
 
 @media (max-width: 768px) {
   #header button {
-    padding: 14px 64px 15px 64px;
+    padding: 10px 64px 10px 64px;
     margin-right: 20px;
     margin: 0px 20px 60px auto;
     display: block; }
@@ -79,7 +100,9 @@
 
 #about {
   background-color: whitesmoke;
-  padding: 50px 0px 0px 0px; }
+  padding: 50px 0px 50px 0px; }
+  #about hr {
+    width: 31%; }
   #about h2 {
     color: #2E556F;
     margin-bottom: 170px; }
@@ -115,9 +138,75 @@
     #about img {
       display: none; } }
 
+#portfolio {
+  background: url(../img/bg2.jpg) no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 50px 0px 50px 0px; }
+  #portfolio hr {
+    width: 37.5%; }
+  #portfolio h2 {
+    color: white;
+    margin-bottom: 100px; }
+  #portfolio .porto {
+    margin-bottom: 50px; }
+  #portfolio #window {
+    padding: 30px; }
+  #portfolio .window {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
+    transition: 0.7s ease; }
+  #portfolio img {
+    margin-bottom: 20px; }
+  #portfolio .port-p {
+    font-style: italic;
+    font-size: 18px;
+    color: #00B9B9;
+    margin-bottom: 40px; }
+  #portfolio p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: white; }
+  #portfolio button {
+    background: rgba(255, 255, 255, 0);
+    padding: 12px 50px 12px 50px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border: 1.5px solid #00B9B9; }
+    #portfolio button a {
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none; }
+    #portfolio button:hover {
+      background: url(../img/button.png) no-repeat;
+      -webkit-transition: 1.5s ease;
+      -o-transition: 1.5s ease;
+      transition: 1.5s ease; }
+
+@media (max-width: 768px) {
+  #portfolio {
+    text-align: center; }
+    #portfolio h2 {
+      font-size: 30px;
+      margin-bottom: 60px; }
+    #portfolio p {
+      font-size: 15px;
+      line-height: 1.6; } }
+
 #advisors {
   background-color: whitesmoke;
   padding: 50px 0px 0px 0px; }
+  #advisors hr {
+    width: 36.5%; }
   #advisors .row {
     margin-bottom: 30px; }
   #advisors h2 {
@@ -157,6 +246,8 @@
   -o-background-size: cover;
   background-size: cover;
   padding: 50px 0px 90px 0px; }
+  #investors hr {
+    width: 36.5%; }
   #investors h2 {
     color: white;
     margin-bottom: 120px; }
@@ -165,6 +256,13 @@
     color: #00B9B9; }
   #investors img {
     margin-bottom: 40px; }
+    #investors img:hover {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      -webkit-transition: 0.7s ease;
+      -o-transition: 0.7s ease;
+      transition: 0.7s ease; }
 
 @media (max-width: 768px) {
   #investors {
