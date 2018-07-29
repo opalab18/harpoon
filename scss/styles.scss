@@ -3,8 +3,19 @@ $text2-color:white;
 $text3-color:#00B9B9;
 $f-family:Tahoma, Geneva, sans-serif;
 
+.headings{
+	font-weight:bold;
+	font-size:40px;
+}
+.responsive{
+	width: 100%;
+    height: auto;
+}
+
 #header{
-	background: url(../img/bg1.jpg) no-repeat; 
+	width:100%;
+	margin: auto auto;
+	background: url(../img/bg1.jpg); 
 	-webkit-background-size: fixed;
 	-moz-background-size: fixed;
 	-o-background-size: fixed;
@@ -47,12 +58,25 @@ $f-family:Tahoma, Geneva, sans-serif;
 		text-align:center;
 		i{
 			color:white;
-			.fa{
-				font-size:30px;
-			}
 		}
 	}
-	
+}
+@media (max-width: 1366px){
+	#header{
+		button{
+			padding:14px 64px 15px 64px;
+			margin-right:20px;
+			margin:0px 20px 170px auto;
+			display:block;
+			a{
+				font-size:15px;
+			}
+		}
+		img{
+			display:block;
+			margin: 0px 0px 160px 0px;
+		}
+	}
 }
 @media (max-width: 768px){
 	#header{
@@ -78,6 +102,58 @@ $f-family:Tahoma, Geneva, sans-serif;
 	}
 }
 
+#about{
+	background-color:whitesmoke;
+	padding:50px 0px 0px 0px;
+	h2{
+		@extend .headings;
+		color:$text1-color;
+		margin-bottom:170px;
+	}
+	h3{
+		@extend .headings;
+		color:$text1-color;
+		margin-bottom:50px;
+	}
+	p{
+		font-family:$f-family;
+		font-size:20px;
+	}
+	img{
+		margin:17px;
+	}
+	.about-fl{
+		position: absolute;
+	    top: 123%;
+	    right: 7%;
+	}
+}
+@media (max-width: 1366px) {
+	.about-fl{
+		display: none;
+	}
+}
+@media (max-width: 1000px) {
+	#about{
+		text-align:center;
+		h2{
+			font-size:30px;
+			margin-bottom:70px;
+		}
+		h3{
+			font-size:30px;
+			margin-bottom:20px;
+		}
+		p{
+			font-family:$f-family;
+			font-size:15px;
+		}
+		img{
+			display: none;
+		}
+	}
+}
+
 #advisors{
 	background-color:whitesmoke;
 	padding:50px 0px 0px 0px;
@@ -85,8 +161,7 @@ $f-family:Tahoma, Geneva, sans-serif;
 		margin-bottom:30px;
 	}
 	h2{
-		font-weight:bold;
-		font-size:35px;
+		@extend .headings;
 		color:$text1-color;
 		margin-bottom:80px;
 	}
@@ -114,6 +189,12 @@ $f-family:Tahoma, Geneva, sans-serif;
 @media (max-width: 1200px){
 	#advisors{
 		text-align:center;
+		h2{
+			font-size:30px;
+		}
+		h5{
+			font-size:30px;
+		}
 		li{
 			list-style-type: none;
 		}
@@ -131,8 +212,7 @@ $f-family:Tahoma, Geneva, sans-serif;
 	background-size: cover;
 	padding:50px 0px 90px 0px;
 	h2{
-		font-weight:bold;
-		font-size:40px;
+		@extend .headings;
 		color:$text2-color;
 		margin-bottom:120px;
 	}
@@ -147,7 +227,12 @@ $f-family:Tahoma, Geneva, sans-serif;
 @media (max-width: 768px){
 	#investors{
 		text-align:center;
+		h2{
+			font-size:30px;
+			margin-bottom:60px;
+		}
 	}
+	
 }
 
 #copyright{
@@ -163,8 +248,9 @@ $f-family:Tahoma, Geneva, sans-serif;
 }
 @media (max-width: 768px){
 	#copyright{
+		padding:10px 0px 10px 0px;
 		p{
-			font-size:15px;
+			font-size:10px;
 		}
 	}
 }

@@ -1,5 +1,15 @@
+.headings, #about h2, #about h3, #advisors h2, #investors h2 {
+  font-weight: bold;
+  font-size: 40px; }
+
+.responsive {
+  width: 100%;
+  height: auto; }
+
 #header {
-  background: url(../img/bg1.jpg) no-repeat;
+  width: 100%;
+  margin: auto auto;
+  background: url(../img/bg1.jpg);
   -webkit-background-size: fixed;
   -moz-background-size: fixed;
   -o-background-size: fixed;
@@ -37,8 +47,18 @@
     text-align: center; }
     #header .fafa i {
       color: white; }
-      #header .fafa i .fa {
-        font-size: 30px; }
+
+@media (max-width: 1366px) {
+  #header button {
+    padding: 14px 64px 15px 64px;
+    margin-right: 20px;
+    margin: 0px 20px 170px auto;
+    display: block; }
+    #header button a {
+      font-size: 15px; }
+  #header img {
+    display: block;
+    margin: 0px 0px 160px 0px; } }
 
 @media (max-width: 768px) {
   #header button {
@@ -57,14 +77,50 @@
     display: block;
     margin: 0px auto 20px auto; } }
 
+#about {
+  background-color: whitesmoke;
+  padding: 50px 0px 0px 0px; }
+  #about h2 {
+    color: #2E556F;
+    margin-bottom: 170px; }
+  #about h3 {
+    color: #2E556F;
+    margin-bottom: 50px; }
+  #about p {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 20px; }
+  #about img {
+    margin: 17px; }
+  #about .about-fl {
+    position: absolute;
+    top: 123%;
+    right: 7%; }
+
+@media (max-width: 1366px) {
+  .about-fl {
+    display: none; } }
+
+@media (max-width: 1000px) {
+  #about {
+    text-align: center; }
+    #about h2 {
+      font-size: 30px;
+      margin-bottom: 70px; }
+    #about h3 {
+      font-size: 30px;
+      margin-bottom: 20px; }
+    #about p {
+      font-family: Tahoma, Geneva, sans-serif;
+      font-size: 15px; }
+    #about img {
+      display: none; } }
+
 #advisors {
   background-color: whitesmoke;
   padding: 50px 0px 0px 0px; }
   #advisors .row {
     margin-bottom: 30px; }
   #advisors h2 {
-    font-weight: bold;
-    font-size: 35px;
     color: #2E556F;
     margin-bottom: 80px; }
   #advisors img {
@@ -85,6 +141,10 @@
 @media (max-width: 1200px) {
   #advisors {
     text-align: center; }
+    #advisors h2 {
+      font-size: 30px; }
+    #advisors h5 {
+      font-size: 30px; }
     #advisors li {
       list-style-type: none; }
     #advisors .adv-bot {
@@ -98,8 +158,6 @@
   background-size: cover;
   padding: 50px 0px 90px 0px; }
   #investors h2 {
-    font-weight: bold;
-    font-size: 40px;
     color: white;
     margin-bottom: 120px; }
   #investors p {
@@ -110,7 +168,10 @@
 
 @media (max-width: 768px) {
   #investors {
-    text-align: center; } }
+    text-align: center; }
+    #investors h2 {
+      font-size: 30px;
+      margin-bottom: 60px; } }
 
 #copyright {
   padding: 20px 0px 20px 0px;
@@ -123,5 +184,7 @@
     margin-bottom: 0px; }
 
 @media (max-width: 768px) {
-  #copyright p {
-    font-size: 15px; } }
+  #copyright {
+    padding: 10px 0px 10px 0px; }
+    #copyright p {
+      font-size: 10px; } }
